@@ -1,0 +1,298 @@
+/* ========================================
+   CALCULADORA MMR DOTA 2 - ESTILOS CSS
+   ======================================== */
+
+/* RESET E CONFIGURAÇÕES BÁSICAS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CONFIGURAÇÕES DO CORPO DA PÁGINA */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, #1b99d3, #5035c7, #430dc4);
+    color: #3b1fa1;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #02084288;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(30, 228, 235, 0.986);
+}
+
+/* ========================================
+   SEÇÃO DO CABEÇALHO
+   ======================================== */
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1 {
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #31d6ffab;
+}
+
+/* ========================================
+   SEÇÃO DO FORMULÁRIO
+   ======================================== */
+.form-section {
+    background: #080e42b2;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    color: #31c8ee;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #7b4aca;
+    border-radius: 8px;
+    background: #1a1a2ed5;
+    color: #fff;
+    font-size: 16px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #774cc9;
+}
+
+/* ========================================
+   BOTÃO DE CÁLCULO
+   ======================================== */
+.calculate-btn {
+    width: 100%;
+    background: linear-gradient(360deg,#6d28d9, #4c1d95);
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.calculate-btn:hover {
+    background: #1288d6;
+}
+
+/* ========================================
+   SEÇÃO DE RESULTADOS
+   ======================================== */
+.results {
+    background: #02084288;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: none;
+    margin-bottom: 20px;
+}
+
+.result-item {
+    margin-bottom: 15px;
+}
+
+.result-label {
+    color: #a8a8a8;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.result-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7966ce;
+}
+
+.result-value.mmr {
+    color: #19c3c9;
+}
+
+/* ========================================
+   INFORMAÇÕES DE DESCONTO
+   ======================================== */
+.discount-info {
+    background: #3854b3;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+    display: none;
+}
+
+/* ========================================
+   OBSERVAÇÃO SOBRE STREAM
+   ======================================== */
+.stream-notice {
+    background: #ffa726;
+    color: #1a1a2e;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stream-notice p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* ========================================
+   TABELA DE PREÇOS
+   ======================================== */
+.price-table {
+    background: #02084288;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.price-table h3 {
+    color: #31a2ff;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.price-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.price-table th,
+.price-table td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #004879;
+}
+
+.price-table th {
+    background: linear-gradient(360deg,#6c28d9b6, #4d1d95a4);;
+    color: #ffffff;
+}
+
+.price-table td {
+    color: #29d4ff;
+}
+
+/* ========================================
+   MENSAGENS DE ERRO
+   ======================================== */
+.error {
+    color: #fa3232;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+/* ========================================
+   TEXTO INFORMATIVO
+   ======================================== */
+.info-text {
+    color: #a8a8a8;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/* ========================================
+   RESPONSIVIDADE PARA MOBILE
+   ======================================== */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .result-value {
+        font-size: 20px;
+    }
+    
+    .stream-notice {
+        padding: 12px;
+    }
+}
+
+.whatsapp-btn {
+    width: 100%;
+    background: linear-gradient(360deg,#6d28d9, #4c1d95); /* Azul degradê */
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+    background: #005fcc; /* Azul mais claro no hover */
+}
+
+.whatsapp-btn:hover {
+    background: #1288d6;
+}
+.whatsapp-btn:hover {
+    background: #1288d6;
+}
+
+/* Estilo para opções de rádio verticais personalizadas */
+.form-group.radio-vertical label {
+    display: inline-block;
+    margin-left: 5px;       /* distância entre bolinha e texto */
+    color: #31c8ee;
+    vertical-align: middle; /* mantém alinhamento */
+}
+
+.form-group.radio-vertical input[type="radio"] {
+    width: 20px;       /* largura da bolinha */
+    height: 20px;      /* altura da bolinha */
+    margin-top: -7px;   /* ajusta cima/baixo (negativo sobe, positivo desce) */
+    margin-right: 5px; /* distância horizontal até o texto */
+    vertical-align: middle; /* mantém alinhamento */
+
+    .footer-img {
+    width: 120px;
+    height: auto;
+    opacity: 0.9;        /* um leve efeito */
+    transition: transform 0.2s ease;
+}
+
+/* Estilo para opções de rádio verticais personalizadas */
+.form-group.radio-vertical label {
+    display: inline-block;
+    margin-left: 5px;
+    color: #31c8ee;
+    vertical-align: middle;
+}
+ 

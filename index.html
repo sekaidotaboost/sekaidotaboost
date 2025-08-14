@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora MMR Dota 2</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- CABEÇALHO -->
+        <div class="header">
+            <h1> SEKAI DOTA BOOST </h1>
+            <p>Contratação mínima de 500 MMR para contas com menos de 4.000 MMR.</p>
+        </div>
+
+        <!-- FORMULÁRIO -->
+        <div class="form-section">
+            <div class="form-group">
+                <label for="mmrAtual">MMR Atual (0 - 8500):</label>
+                <input type="number" id="mmrAtual" min="0" max="8500" placeholder="Ex: 2000">
+                <div class="error" id="errorAtual"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="mmrDesejado">MMR Desejado (0 - 8500):</label>
+                <input type="number" id="mmrDesejado" min="0" max="8500" placeholder="Ex: 3000">
+                <div class="error" id="errorDesejado"></div>
+            </div>
+        </div>
+        
+        <!-- NOVO CAMPO: Off-stream -->
+<div class="form-group radio-vertical" style="position: relative;">
+    <label>Serviço off-stream? (transmissão no sekai_oficial)</label><br> 
+    
+    <input type="radio" id="offSim" name="offStream" value="sim">
+    <label for="offSim">Sim</label><br>
+
+    <input type="radio" id="offNao" name="offStream" value="nao" checked>
+    <label for="offNao">Não</label>
+
+    <!-- Imagem Twitch -->
+    <img src="img/twitch.png" 
+         style="position: absolute; top: 8px; right: 390px; width: 90px; height: auto;">
+<img src="img/medalha.png" 
+         style="position: absolute; top: -360px; right: 440px; width: 60px; height: auto;">
+         <img src="img/emot.png" 
+         style="position: absolute; top: -25px; right: 60px; width: 80px; height: auto;">
+
+         
+</div>
+        <!-- BOTÃO CALCULAR -->
+        <button class="calculate-btn" onclick="calcular()">⚡ CALCULAR PREÇO</button>
+
+        <!-- RESULTADOS -->
+        <div class="results" id="resultados">
+            <div class="result-item">
+                <div class="result-label">MMR a Ganhar</div>
+                <div class="result-value mmr" id="mmrGanhar">0</div>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label">Preço Base</div>
+                <div class="result-value" id="precoBase">R$ 0,00</div>
+            </div>
+
+            <div class="discount-info" id="descontoInfo">
+                Desconto: <span id="descontoTexto">0%</span>
+            </div>
+
+            <div class="result-item">
+                <div class="result-label">Preço Final</div>
+                <div class="result-value" id="precoFinal">R$ 0,00</div>
+            </div>
+        <!-- BOTÃO WHATSAPP -->
+<button class="whatsapp-btn" onclick="fazerPedido()">
+    🚀 FAZER PEDIDO
+</button>
+</div>
+
+
+        <!-- OBSERVAÇÃO SOBRE STREAM -->
+        <div class="stream-notice">
+            <p><strong>⚠️ Observação:</strong>"Serviço fora da transmissão (off-stream) está sujeito a cobrança adicional."</p>
+        </div>
+
+        <!-- TABELA DE PREÇOS -->
+        <div class="price-table">
+            <h3>  Tabela de Preços por Faixa 💰</h3>
+            <table>
+                <tr>
+                    <th>Faixa MMR</th>
+                    <th>💸Preço/MMR</th>
+                </tr>
+                <tr><td>0 - 4.000</td><td>R$ 0,40</td></tr>
+                <tr><td>4.001 - 4.500</td><td>R$ 0,65</td></tr>
+                <tr><td>4.501 - 5.000</td><td>R$ 0,75</td></tr>
+                <tr><td>5.001 - 5.500</td><td>R$ 1,10</td></tr>
+                <tr><td>5.501 - 6.000</td><td>R$ 2,10</td></tr>
+                <tr><td>6.001 - 6.500</td><td>R$ 3,20</td></tr>
+                <tr><td>6.501 - 7.000</td><td>R$ 3,80</td></tr>
+                <tr><td>7.001 - 7.500</td><td>R$ 4,75</td></tr>
+                <tr><td>7.501 - 8.000</td><td>R$ 7,60</td></tr>
+                <tr><td>8.001 - 8.500</td><td>R$ 8,50</td></tr>
+            </table>
+            
+            <div class="info-text">
+                <strong>🎉Descontos:</strong> 500+ MMR: 4% | 750+ MMR: 6% | 1000+ MMR: 8% | 1250+ MMR: 10% | 1500+ MMR: 12%<br>
+                <strong>⚠️ Importante:</strong> Descontos só para MMR inicial ≥ 4000
+        </div>
+        
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+
